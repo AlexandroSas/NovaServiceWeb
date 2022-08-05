@@ -1,0 +1,45 @@
+$NOVADARK: #193762;
+$TXTL: #DEDEDE;
+$FONT_TXT: "Quicksand", sans-serif;
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    img {
+        align-self: flex-end;
+    }
+    div{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-items: center;
+        p {
+            width: 80%;
+            a {
+                display: block;
+                padding: 2em;
+                text-align: center;
+                text-decoration: none;
+                background-color: $NOVADARK;
+                color: $TXTL;
+                font-family: $FONT_TXT;
+                font-weight: bold;
+                font-size: 35px;
+                letter-spacing: 2px;
+                border-radius: 16px;
+                &:hover {
+                    color: $NOVADARK;
+                    background-color: $TXTL;
+                }
+            }
+        }
+    }
+}
