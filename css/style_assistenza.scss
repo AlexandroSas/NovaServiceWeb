@@ -1,0 +1,53 @@
+$NOVADARK: #193762;
+$TXTL: #DEDEDE;
+$FONT_TXT: "Quicksand", sans-serif;
+$FONT_TITLE: 'Hammersmith One', sans-serif;
+$FONT: 'Kantumruy Pro', sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    align-items: center;
+    justify-items: center;
+    h1{
+        font-family: $FONT;
+        font-weight: bold;
+        font-size: 113px;
+        color: $NOVADARK;
+        letter-spacing: 0.05em;
+        align-self: flex-end;
+    }
+    div{
+        width: 85%;
+        height: 90%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        align-items: center;
+        justify-items: center;
+        font-family: $FONT_TXT;
+        p{
+            width: 85%;
+            a{
+                display: block;
+                padding: 2em;
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: 600px;
+                color: $TXTL;
+                background-color: $NOVADARK;
+                text-align: center;
+                letter-spacing: 1px;
+                border-radius: 8px;
+                &:hover {
+                    color: $NOVADARK;
+                    background-color: $TXTL;
+                }
+            }
+        }
+    }
+}
