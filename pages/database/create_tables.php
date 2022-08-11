@@ -11,7 +11,7 @@
 
     $sql = "CREATE DATABASE IF NOT EXISTS NovaService";
     if(mysqli_query($conn, $sql)){
-        echo "Database NovaService Creata Correttamente";
+        echo "</p>Database NovaService Creato Correttamente</p>";
     } else {
         echo 'Error: ' . mysqli_error($conn);
     }
@@ -25,7 +25,7 @@
     }
 
     $sql = "CREATE TABLE IF NOT EXISTS utenti (
-        ID INT NOT NULL AUTO_INCREMENT,
+        ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         nome VARCHAR(255) NOT NULL,
         cognome VARCHAR(255) NOT NULL,
         email VARCHAR(255) NOT NULL,
@@ -34,13 +34,13 @@
         ruolo INT NOT NULL
     )";
     if(mysqli_query($conn, $sql)){
-        echo "Tabella Utenti Creata Correttamente";
+        echo "<p>Tabella Utenti Creata Correttamente</p>";
     } else {
-        echo 'Error: ' . mysqli_error($conn);
+        echo '<p>Error: ' . mysqli_error($conn) . '</p>';
     }
 
     $sql = "CREATE TABLE IF NOT EXISTS clienti (
-        ID INT NOT NULL AUTO_INCREMENT,
+        ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         intestazione VARCHAR(255) NOT NULL,
         agenzia VARCHAR(255) NOT NULL,
         via VARCHAR(255) NOT NULL,
@@ -58,13 +58,13 @@
         id_sede_legale INT
     )";
     if(mysqli_query($conn, $sql)){
-        echo "Tabella Clienti Creata Correttamente";
+        echo "<p>Tabella Clienti Creata Correttamente</p>";
     } else {
-        echo 'Error: ' . mysqli_error($conn);
+        echo '<p>Error: ' . mysqli_error($conn) . '</p>';
     }
 
     $sql = "CREATE TABLE IF NOT EXISTS sedi_legali (
-        ID INT NOT NULL AUTO_INCREMENT,
+        ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         intestazione VARCHAR(255) NOT NULL,
         via VARCHAR(255) NOT NULL,
         civico VARCHAR(255) NOT NULL,
@@ -80,9 +80,9 @@
         pec VARCHAR(255)
     )";
     if(mysqli_query($conn, $sql)){
-        echo "Tabella Sedi Legali Creata Correttamente";
+        echo "<p>Tabella Sedi Legali Creata Correttamente</p>";
     } else {
-        echo 'Error: ' . mysqli_error($conn);
+        echo '<p>Error: ' . mysqli_error($conn) . '</p>';
     }
 
     mysqli_close($conn);

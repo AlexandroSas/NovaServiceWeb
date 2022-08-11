@@ -1,35 +1,53 @@
 <?php
-    //3saRo9#1
+    require("./pages/database/db.php");
+    require("./pages/database/crypt.php");
 
-    define('DB_HOST', 'localhost');
-    define('DB_USER', 'alexandro.sas');
-    define('DB_PASS', 'nm37llA_98!');
-    define('DB_NAME', 'dbtest');
-
-    $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-    if($conn->connect_error){
-        die('Connection Failed ' . $conn->connect_error);
-    }
-
-    $sql = 'SELECT * FROM users';
+    $sql = 'SELECT ID, username, password, ruolo, nome, img FROM utenti';
     $result = mysqli_query($conn, $sql);
     $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-
-    $ciphering = "AES-256-CBC";
-    $iv_length = openssl_cipher_iv_length($ciphering);
-    $options = 0;
-    $encryption_iv = '1234567891011121';
-    $encryption_key = "i-yNS4ykNyHelKKnyENovaServiceKVTQeI_TjtDFSg=";
+    $roles = [
+        "Dirigente",
+        "Amministrazione",
+        "Assistenza",
+        "Software Developer",
+        "Commerciale",
+        "Tecnico",
+        "Magazziniere",
+        "Ufficio Legale"
+    ];
 
     if(isset($_POST['submit'])){
         $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
-        //$password = htmlspecialchars($_POST['password']);
-
         $encryption = openssl_encrypt($password, $ciphering, $encryption_key, $options, $encryption_iv);
         foreach($users as &$user){
-            echo $user;
+            if($user['username'] == $username && $user['password'] == $encryption){
+                session_start();
+                $_SESSION['ID'] = $user['ID'];
+                $_SESSION['img'] = $user['img'];
+                $_SESSION['name'] = $user['nome'];
+                $_SESSION['role'] = $roles[$user['ruolo']];
+
+                // if($user['ruolo'] == 0)
+                //     header("Location: ./pages/users/dirigenza.php");
+                // else if($user['ruolo'] == 1)
+                //     header("Location: ./amministrazione.php");
+                // else if($user['ruolo'] == 2)
+                //     header("Location: ./assistenza.php");
+                // else if($user['ruolo'] == 3)
+                //     header("Location: ./sviluppo.php");
+                // else if($user['ruolo'] == 4)
+                //     header("Location: ./commerciale.php");
+                // else if($user['ruolo'] == 5)
+                //     header("Location: ./tecnico.php");                
+                // else if($user['ruolo'] == 6)
+                //     header("Location: ./magazzino.php");                
+                // else if($user['ruolo'] == 7)
+                //     header("Location: ./ufficiolegale.php");
+
+                header("Location: ./pages/users/profile.php");
+            }
         }
     }
 
@@ -52,11 +70,10 @@
     <div class="login">
         <div class="titles">
             <h3>Benvenuto In</h3>
-            <h1><img src="./res/Logo.png">Nova Service SRL</h1>
+            <h1><img src="./res/img/Logo_.png">Nova Service SRL</h1>
         </div>
         <div class="form">
             <p>Effettua il Log In</p>
-            <p><?php echo $lol; ?></p>
             <form action="./index.php" method="POST">
                 <input type="text" name="username" id="username">
                 <input type="password" name="password" id="password">
@@ -67,7 +84,7 @@
     </div>
     <div class="container">
         <div class="info">
-            <img src="./res/Novaservice.png" />
+            <img src="./res/img/Novaservice_.png" />
             <p>Piccola Descrizione dell'azienda: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nemo rerum, reprehenderit reiciendis totam, dignissimos optio asperiores esse delectus quo veritatis blanditiis perspiciatis nisi voluptatem culpa laboriosam animi repudiandae aperiam?</p>
         </div>
     </div>
