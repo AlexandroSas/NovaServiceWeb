@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.container ul {
+  list-style: none;
+}
+.container ul h1 {
+  text-align: center;
+}/*# sourceMappingURL=home_assistenza.css.map */

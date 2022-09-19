@@ -1,0 +1,15 @@
+*{
+    padding:0;
+    margin:0;
+}
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    ul{
+        list-style: none;
+        h1{
+            text-align: center;
+        }
+    }
+}

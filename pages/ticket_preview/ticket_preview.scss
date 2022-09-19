@@ -1,0 +1,35 @@
+.chiamata{
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 10% 50% 40%;
+    align-items: center;
+    background-color: #dedede;
+    
+    width:80%;
+    padding: 0.25em;
+    margin: 0 auto;
+    margin-top: 0.15em;
+    span{
+        text-align: center;
+    }
+    h3{    
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+    div{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        p{
+            align-self: end;
+            margin: 0.25em;
+
+            &:first-child{
+                align-self: start;
+            }
+        }
+    }
+}
