@@ -13,21 +13,42 @@
 .chiamata span {
   text-align: center;
 }
-.chiamata h3 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 .chiamata div {
   display: grid;
   grid-template-rows: 1fr 1fr;
   justify-items: center;
   align-items: center;
+  height: 100%;
+}
+.chiamata div h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  justify-self: start;
+  align-self: flex-end;
+}
+.chiamata div h6 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  justify-self: start;
+  color: #555;
 }
 .chiamata div p {
-  align-self: end;
-  margin: 0.25em;
+  padding: 0.5em;
+  justify-self: end;
 }
-.chiamata div p:first-child {
-  align-self: start;
+.chiamata div ul {
+  justify-self: end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+.chiamata div ul li {
+  padding: 0.25em;
+}
+.chiamata div ul li span {
+  font-size: 0.9em;
+  color: #555;
 }/*# sourceMappingURL=ticket_preview.css.map */

@@ -1,0 +1,192 @@
+@import "./common/colors.scss";
+
+$FONT: "Quicksand", sans-serif;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: -19%;
+    height: 100%;
+    width: 25%;
+    background-color: $PD;
+    
+    display: grid;
+    grid-template-rows: max-content max-content auto;
+
+    .logo_content{
+        margin: 1em 1em 1em 0;
+        display: flex;
+        align-items: center;
+        .logo{
+            height: 100%;
+            width: 80%;
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            color: $PL;
+            font-weight: bold;
+            font-size: 1.1em;
+            div{
+                img{
+                    width: 2rem;
+                }
+            }
+            .logo_name{
+                width: 100%;
+                padding: 0.5em;
+            }
+        }
+        #sb_btn{
+            display: grid;
+            align-items: center;
+            margin-left: auto;
+            padding: 0.5em;
+            color: $NOVAL;
+            &:hover{
+                cursor: pointer;
+                color: $NOVALL;
+                text-shadow: 10px $NOVALL;
+                transition: color .65s ease-in-out;
+            }
+            border-radius: 8px;
+        }
+        padding: 1.1em;
+
+    }
+    .nav_list{
+        list-style: none;
+        li{
+            pointer-events: none;
+            a{
+                pointer-events: auto;
+                display: block;
+                span{
+                    width: 2rem;
+                    display: grid;
+                    justify-items: center;
+                    align-items: center;
+                    color: $NOVAL;
+                    opacity: 0;
+                    transition: 0.5s ease-in-out;
+                }
+                span.active{
+                    opacity: 1;
+                    transition: 0.5s ease-in-out;
+                }
+                display: flex;
+                align-items: center;
+                gap: 0.5em;
+                padding: 1em;
+                color: $PGL;
+                font-weight: bold;
+                font-size: 1.1em;
+                text-decoration: none;
+                &:hover{
+                    background-color: $PL;
+                    color: $NOVAD;
+                }
+
+                border-radius: 8px;
+                width: 90%;
+                margin: 0 auto;
+            }
+            .tooltip{
+                display: none;
+            }
+            &:hover{
+                display: grid;
+                grid-template-columns: 100% auto;
+                align-items: center;
+                justify-items: center;
+                .tooltip{
+                    display: grid;
+                    align-items: center;
+
+                    position: relative;
+                    left: 10%;
+                    width: 100px;
+    
+                    padding: 1em;
+            
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 0.75em;
+                    
+                    background-color: $NOVAD;
+                    color: $PL;
+                    
+                    border-radius: 8px;
+                }
+                .activex{
+                    display: none;
+                }
+            }
+        }
+    }
+    .profile_content{
+        align-self: flex-end;
+        .profile{
+            .profile_details{
+                margin: 1em 1em 1em 0;
+                display: flex;
+                align-items: center;
+                color: $PL;
+                div{
+                    img{
+                        margin-left: 1em;
+                        width: 6em;
+                        border-radius: 16px;
+                        padding: 0.5em;
+                    }
+                }
+                .name_job{
+                    display: grid;
+                    grid-template-rows: 1fr 1fr;
+                    align-items: center;
+                    justify-items: center;
+                    padding: 1em;
+
+                    .job{
+                        color: $PG;
+                    }
+                }
+                #lo_btn{
+                    display: grid;
+                    align-items: center;
+                    padding: 0.5em;
+                    margin-left: auto; 
+                    margin-right: 1em;
+                    color: $DARKRED;
+                    &:hover{
+                        cursor: pointer;
+                        color: $RED;
+                        transition: color .65s ease-in-out;
+                    }
+                }
+            }                
+        }
+    }
+
+    transition: all 0.5s ease-in-out;
+
+    &.active{
+        left: 0;
+        transition: all 0.5s ease-in-out;
+    }
+}
+

@@ -17,10 +17,17 @@
     <li class="source <?php echo $chiamata['status']; ?>" draggable="true" id="<?php echo $chiamata['ID']; ?>">
         <div class="chiamata" >
             <span class="material-icons">menu</span>
-            <h3><?php echo $chiamata['titolo']; ?></h3>
+            <div>
+                <h3><?php echo $chiamata['titolo']; ?></h3>
+                <h6>Via Elba 21</h6>
+            </div>
             <div>
                 <p><?php echo $chiamata['ID']; ?></p>
-                <p><?php echo $autore; ?></p>
+                <ul>
+                    <li><span class="material-icons">cached</span></li>
+                    <li><span class="material-icons">done</span></li>
+                    <li><span class="material-icons">close</span></li>
+                </ul>
             </div>
         </div>         
     </li>   
