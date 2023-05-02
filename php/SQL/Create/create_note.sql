@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS note(
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    
+    Descrizione VARCHAR(255) NOT NULL,
+    Data DATETIME NOT NULL,
+    ID_Utente INT NOT NULL,
+
+    CONSTRAINT unique_note UNIQUE (Descrizione, Data)
+);

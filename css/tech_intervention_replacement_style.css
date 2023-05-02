@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+* body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #003366;
+}
+* body form {
+  position: fixed;
+  top: 5vh;
+  left: 5%;
+  width: 100%;
+  height: 90vh;
+  overflow-y: scroll;
+  background-color: white;
+  border-radius: 32px;
+  width: 90%;
+}
+* body form h1 {
+  display: grid;
+  grid-template-columns: max-content auto;
+  font-size: 2em;
+  padding: 2em 2em 0.35em 2em;
+  color: #003366;
+}
+* body form h1 span.material-icons {
+  font-size: 1.1em;
+  padding-right: 0.35em;
+}
+* body form hr {
+  border: 1px solid #003366;
+  width: 90%;
+  margin: 0 auto;
+}
+* body form div.container {
+  height: 80%;
+  overflow-y: auto;
+  padding: 1em;
+}
+* body form div.container h2 {
+  padding: 1em 2em;
+  font-weight: lighter;
+  color: #003366;
+}
+* body form div.container ul {
+  padding: 1em 0 0 0;
+}
+* body form div.container ul li {
+  width: 90%;
+  margin: 0 auto 1em auto;
+  border-radius: 8px;
+  border: 2px solid #003366;
+  padding: 0.5em 0;
+  background: linear-gradient(to right, #003366 20%, white 20%);
+}
+* body form div.container ul li div.replacement {
+  display: grid;
+  grid-template-columns: 20% 20% auto 5%;
+  align-items: center;
+  text-align: center;
+  font-size: 1.25em;
+}
+* body form div.container ul li div.replacement h3 {
+  color: white;
+}
+* body form div.container ul li div.replacement p {
+  color: #004996;
+  padding: 0 1em;
+  border-right: 2px solid #003366;
+}
+* body form div.container ul li div.replacement p:nth-child(3) {
+  color: black;
+  text-align: start;
+  border-right: none;
+  padding: 0 2em;
+}
+* body form div.container ul li div.replacement span.material-icons {
+  color: #003366;
+}
+* body form div.search-bar {
+  padding: 2.5em 0;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+* body form div.search-bar span.material-icons {
+  padding-right: 0.25em;
+  font-size: 3em;
+  color: #003366;
+}
+* body form div.search-bar input {
+  background: rgba(0, 73, 150, 0.2);
+  border: 2px solid #003366;
+  border-radius: 8px;
+  padding: 1em;
+  color: #003366;
+}
+* body form div.search-bar input:focus {
+  outline: none;
+  border: 2px solid #004996;
+}
+* body form > input:last-of-type {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1em;
+  border: none;
+  border-radius: 8px;
+  background-color: #003366;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25em;
+  letter-spacing: 2px;
+}
+
+.hidden {
+  opacity: 0%;
+}
+
+.hidden-pro {
+  display: none;
+}/*# sourceMappingURL=tech_intervention_replacement_style.css.map */

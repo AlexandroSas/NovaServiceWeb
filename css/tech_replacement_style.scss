@@ -1,0 +1,150 @@
+$NOVA_BG: #003366;
+$NOVA_F: #004996;
+$GRAY_BG: #F3F3F3;
+
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+    body{
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+
+        header{
+            position: fixed;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 10vh;
+            border-radius: 0 0 50px 50px;
+            background: $NOVA_BG;
+
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            
+            img{
+                width: 4em;
+            }
+        }
+        div.search-bar{
+            position: fixed;
+            top: 10vh;
+            left: 10%;
+            padding: 1em 0;
+            width: 80%;
+            display: grid;
+            grid-template-columns: max-content auto;
+            span.material-icons{
+                padding-right: 0.25em;
+                font-size: 3em;
+                color: $NOVA_BG;
+            }
+            input{
+                background: rgba($NOVA_F,0.2);
+                border: 2px solid $NOVA_BG;
+                border-radius: 8px;
+                padding: 1em;
+                color: $NOVA_BG;
+                &:focus{
+                    outline: none;
+                    border: 2px solid $NOVA_F;
+                }
+            }
+        }
+        div.container{
+            position: fixed;
+            top: calc(10vh + 5em);
+            left: 5%;
+            width: 100%;
+            height: calc(80vh - 6em);
+            overflow-y: scroll;
+
+            background-color: rgba($NOVA_F,0.2);
+            border-radius: 32px;
+            width: 90%;
+
+            ul{
+                padding: 1em 0 0 0;
+                li{
+                    width: 80%;
+                    margin: 0 auto 1em auto;
+                    border-radius: 8px;
+                    border: 2px solid $NOVA_BG;
+                    padding: 0.5em 0;
+                    background: linear-gradient(to right, $NOVA_BG 20%, white 20%);
+
+                    div.replacement{
+                        display: grid;
+                        grid-template-columns: 20% 20% auto;
+                        align-items: center;
+                        text-align: center;
+                        font-size: 1.25em;
+                        h3{
+                            color: white;
+                        }
+                        p{
+                            color: $NOVA_F;
+                            padding: 0 1em;
+                            border-right: 2px solid $NOVA_BG;
+                            &:last-child{
+                                color: black;
+                                text-align: start;
+                                border-right: none;
+                                padding: 0 2em;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        footer{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background-color: $NOVA_BG;
+            border-radius: 50px 50px 0 0;
+            width: 100%;
+            height: 10vh;
+            ul{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                height: 100%;
+                li{
+                    &.active{
+                        background-color: $NOVA_F;
+                    }
+                    a{
+                        display: grid;
+                        justify-items: center;
+                        align-items: center;
+                        height: 100%;
+                        width: 100%;
+                        color: white;
+
+                        img{
+                            display: block;
+                            height: 4em;
+                            border-radius: 50%;
+                            border: 4px solid white;
+                        }
+    
+                        span.material-icons{
+                            display: block;
+                            font-size: 4em;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+

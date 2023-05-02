@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS ricambi(
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    
+    IDN INT NOT NULL,
+    SN VARCHAR(255) NOT NULL,
+    Nome VARCHAR(255) NOT NULL,
+    Proprietario TINYINT NOT NULL,
+    ID_Tecnico VARCHAR(255) NOT NULL,
+    ID_Intervento INT,
+
+    CONSTRAINT unique_ricambi_IDN UNIQUE (IDN)
+);

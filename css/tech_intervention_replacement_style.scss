@@ -1,0 +1,142 @@
+$NOVA_BG: #003366;
+$NOVA_F: #004996;
+$GRAY_BG: #F3F3F3;
+
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+    body{
+        width: 100vw;
+        height: 100vh;
+        background-color: $NOVA_BG;
+
+        form{
+            position: fixed;
+            top: 5vh;
+            left: 5%;
+            width: 100%;
+            height: 90vh;
+            overflow-y: scroll;
+
+            background-color: white;
+            border-radius: 32px;
+            width: 90%;
+            h1{
+                display: grid;
+                grid-template-columns: max-content auto;
+                font-size: 2em;
+                padding: 2em 2em 0.35em 2em;
+                color: $NOVA_BG;
+                span.material-icons{
+                    font-size: 1.1em;
+                    padding-right: 0.35em;
+                }
+            }
+            hr{
+                border: 1px solid $NOVA_BG;
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            div.container{
+                height: 80%;
+                overflow-y: auto;
+                padding: 1em;
+
+                h2{
+                    padding: 1em 2em;
+                    font-weight: lighter;
+                    color: $NOVA_BG;
+                }
+                ul{
+                    padding: 1em 0 0 0;
+                    li{
+                        width: 90%;
+                        margin: 0 auto 1em auto;
+                        border-radius: 8px;
+                        border: 2px solid $NOVA_BG;
+                        padding: 0.5em 0;
+                        background: linear-gradient(to right, $NOVA_BG 20%, white 20%);
+    
+                        div.replacement{
+                            display: grid;
+                            grid-template-columns: 20% 20% auto 5%;
+                            align-items: center;
+                            text-align: center;
+                            font-size: 1.25em;
+                            h3{
+                                color: white;
+                            }
+                            p{
+                                color: $NOVA_F;
+                                padding: 0 1em;
+                                border-right: 2px solid $NOVA_BG;
+                                &:nth-child(3){
+                                    color: black;
+                                    text-align: start;
+                                    border-right: none;
+                                    padding: 0 2em;
+                                }
+                            }
+                            span.material-icons{
+                                color:$NOVA_BG;
+                            }
+                        }
+                    }
+                }    
+            }
+
+            div.search-bar{
+                padding: 2.5em 0;
+                width: 90%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: max-content auto;
+                span.material-icons{
+                    padding-right: 0.25em;
+                    font-size: 3em;
+                    color: $NOVA_BG;
+                }
+                input{
+                    background: rgba($NOVA_F,0.2);
+                    border: 2px solid $NOVA_BG;
+                    border-radius: 8px;
+                    padding: 1em;
+                    color: $NOVA_BG;
+                    &:focus{
+                        outline: none;
+                        border: 2px solid $NOVA_F;
+                    }
+                }
+            }
+
+            >input:last-of-type{
+                display: block;
+                width: 90%;
+                margin: 0 auto;
+                padding: 1em;
+                border: none;
+                border-radius: 8px;
+                background-color: $NOVA_BG;
+                color: white;
+                font-weight: bold;
+                font-size: 1.25em;
+                letter-spacing: 2px;
+            }
+            
+        }
+    }
+
+}
+
+.hidden{
+    opacity: 0%;
+}
+.hidden-pro{
+    display: none;
+}

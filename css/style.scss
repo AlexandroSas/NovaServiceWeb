@@ -1,0 +1,110 @@
+$NOVA_BG: #003366;
+$NOVA_F: #004996;
+$GRAY_BG: #F3F3F3;
+
+*{
+    padding: 0px;
+    margin: 0px;  
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+}
+.container{    
+    height: 100%;
+    display: grid;
+    grid-template-rows: 30% auto;
+    align-items: center;
+
+    img{
+        display: block;
+        width:40%;
+        margin: 0 auto;
+    }
+    form{
+        height: 100%;
+        background-color: $NOVA_BG;
+        display: grid;
+
+        div{
+            display: grid;
+            grid-template-columns: 20% 80%;
+            align-items: center;
+            &.error{
+                display: grid;
+                grid-template-columns: auto;
+                
+                align-items: center;
+                justify-items: center;
+                
+                background-color: rgba(crimson,0.5);
+                color: crimson;
+                border: 2px solid crimson;
+                border-radius: 16px;
+                width: 80%;
+                align-self: baseline;
+                justify-self: center;
+                padding: 1em;
+                font-size: 2em;
+                font-weight: bold;
+            }
+            >input{
+                width: 80%;
+                padding: 1em;
+                justify-self: baseline;
+                font-size: 2em;
+                color: $NOVA_BG;
+                &:focus{
+                    outline: none;
+                }
+            }
+            label{
+                justify-self: flex-end;
+                padding-right: 1em;
+                span.material-icons{
+                    font-size: 4em;
+                    color: white;
+                }
+            }
+            &:first-of-type{
+                padding: 1em;
+                align-self: flex-end;
+            }
+            &:nth-of-type(2){
+                padding: 1em;
+                align-self: baseline;
+            }
+        }
+
+        >input{
+            width: 100%;
+            padding: 1em;
+            height: 100%;
+
+            background-color: white;
+            
+            color: $NOVA_BG;
+            font-weight: bold;
+            font-size: larger;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+@media screen and (max-width: 426px){
+    .container{
+        img{
+            width: 50%;
+        }
+        form{
+            label{
+                justify-self: center;
+                span.material-icons{
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

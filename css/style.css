@@ -1,0 +1,97 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 30% auto;
+  align-items: center;
+}
+.container img {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+}
+.container form {
+  height: 100%;
+  background-color: #003366;
+  display: grid;
+}
+.container form div {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  align-items: center;
+}
+.container form div.error {
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  justify-items: center;
+  background-color: rgba(220, 20, 60, 0.5);
+  color: crimson;
+  border: 2px solid crimson;
+  border-radius: 16px;
+  width: 80%;
+  align-self: baseline;
+  justify-self: center;
+  padding: 1em;
+  font-size: 2em;
+  font-weight: bold;
+}
+.container form div > input {
+  width: 80%;
+  padding: 1em;
+  justify-self: baseline;
+  font-size: 2em;
+  color: #003366;
+}
+.container form div > input:focus {
+  outline: none;
+}
+.container form div label {
+  justify-self: flex-end;
+  padding-right: 1em;
+}
+.container form div label span.material-icons {
+  font-size: 4em;
+  color: white;
+}
+.container form div:first-of-type {
+  padding: 1em;
+  align-self: flex-end;
+}
+.container form div:nth-of-type(2) {
+  padding: 1em;
+  align-self: baseline;
+}
+.container form > input {
+  width: 100%;
+  padding: 1em;
+  height: 100%;
+  background-color: white;
+  color: #003366;
+  font-weight: bold;
+  font-size: larger;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 426px) {
+  .container img {
+    width: 50%;
+  }
+  .container form label {
+    justify-self: center;
+  }
+  .container form label span.material-icons {
+    padding: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

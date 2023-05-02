@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+* body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #F3F3F3;
+}
+* body header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  border-radius: 0 0 50px 50px;
+  background: #003366;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+* body header img {
+  padding: 1em 10em;
+  width: 40em;
+  background-color: white;
+  border-radius: 8px;
+}
+* body div.container {
+  position: fixed;
+  top: 10vh;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  overflow-y: scroll;
+}
+* body div.container ul {
+  padding: 1em;
+}
+* body div.container ul > h3 {
+  font-weight: bold;
+  font-size: 1.25em;
+  width: 80%;
+  margin: 0 auto;
+  color: #003366;
+  padding: 1em;
+}
+* body div.container ul li {
+  background-color: white;
+  width: 80%;
+  margin: 0 auto 1em auto;
+  border-radius: 16px;
+  padding: 1em;
+}
+* body div.container ul li div.intervention-item {
+  display: grid;
+}
+* body div.container ul li div.intervention-item div.upper-row {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  align-items: center;
+  padding: 0.5em;
+}
+* body div.container ul li div.intervention-item div.upper-row h3 {
+  display: grid;
+  grid-template-columns: max-content auto;
+  align-items: flex-end;
+  color: #003366;
+}
+* body div.container ul li div.intervention-item div.upper-row h3 span.material-icons {
+  padding-right: 0.25em;
+  align-self: center;
+}
+* body div.container ul li div.intervention-item div.upper-row p {
+  height: 100%;
+  display: grid;
+  align-items: center;
+  text-align: end;
+  color: #004996;
+  font-weight: lighter;
+}
+* body div.container ul li div.intervention-item div.lower-row {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  align-items: center;
+  padding: 0.5em;
+}
+* body div.container ul li div.intervention-item div.lower-row p {
+  height: 100%;
+  display: grid;
+  align-items: center;
+  text-align: start;
+  color: #004996;
+  font-weight: lighter;
+}
+* body div.container ul li div.intervention-item div.lower-row h3 {
+  height: 100%;
+  text-align: end;
+  display: grid;
+  grid-template-columns: auto max-content;
+  align-items: center;
+  padding-left: 1em;
+  color: #003366;
+}
+* body div.container ul li div.intervention-item div.lower-row h3 span.material-icons {
+  font-size: 0.75em;
+  padding-right: 0.25em;
+}
+* body div.container ul li div.intervention-item div.lower-row h3 span.high {
+  color: crimson;
+}
+* body div.container ul li div.intervention-item div.lower-row h3 span.medium {
+  color: #FFC700;
+}
+* body div.container ul li div.intervention-item div.lower-row h3 span.low {
+  color: springgreen;
+}
+* body div.container ul li div.intervention-item-open {
+  display: grid;
+  width: 100%;
+}
+* body div.container ul li div.intervention-item-open div.upper-row {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  align-items: center;
+  padding: 0.5em;
+}
+* body div.container ul li div.intervention-item-open div.upper-row h3 {
+  display: grid;
+  grid-template-columns: max-content auto;
+  align-items: flex-end;
+  color: #003366;
+}
+* body div.container ul li div.intervention-item-open div.upper-row h3 span.material-icons {
+  padding-right: 0.25em;
+  align-self: center;
+}
+* body div.container ul li div.intervention-item-open div.upper-row p {
+  height: 100%;
+  display: grid;
+  align-items: center;
+  text-align: end;
+  color: #004996;
+  font-weight: lighter;
+}
+* body div.container ul li div.intervention-item-open div.lower-row {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  align-items: center;
+  padding: 0.5em;
+}
+* body div.container ul li div.intervention-item-open div.lower-row p {
+  height: 100%;
+  display: grid;
+  align-items: center;
+  text-align: start;
+  color: #004996;
+  font-weight: lighter;
+}
+* body div.container ul li div.intervention-item-open div.lower-row h3 {
+  height: 100%;
+  text-align: end;
+  display: grid;
+  grid-template-columns: auto max-content;
+  align-items: center;
+  padding-left: 1em;
+  color: #003366;
+}
+* body div.container ul li div.intervention-item-open div.lower-row h3 span.material-icons {
+  font-size: 0.75em;
+  padding-right: 0.25em;
+}
+* body div.container ul li div.intervention-item-open div.lower-row h3 span.high {
+  color: crimson;
+}
+* body div.container ul li div.intervention-item-open div.lower-row h3 span.medium {
+  color: #FFC700;
+}
+* body div.container ul li div.intervention-item-open div.lower-row h3 span.low {
+  color: springgreen;
+}
+* body div.container ul li div.intervention-item-open hr {
+  margin-bottom: 0.5em;
+  border: 1px solid #003366;
+}
+* body div.container ul li div.intervention-item-open div.grid-2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+* body div.container ul li div.intervention-item-open div.grid-3 {
+  padding: 1.25em 0;
+}
+* body div.container ul li div.intervention-item-open div.info {
+  padding: 0.25em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: max-content auto;
+  align-items: center;
+}
+* body div.container ul li div.intervention-item-open div.info h5 {
+  padding: 0.25em 0;
+  font-size: large;
+  font-weight: bold;
+  color: #003366;
+}
+* body div.container ul li div.intervention-item-open div.info p.txt-ico {
+  display: grid;
+  grid-template-columns: max-content auto;
+  align-items: center;
+}
+* body div.container ul li div.intervention-item-open div.info p.txt-ico span.material-icons {
+  padding-right: 0.25em;
+  font-size: 1em;
+}
+* body div.container ul li div.intervention-item-open div.info p {
+  padding-left: 1em;
+  font-weight: lighter;
+  color: #004996;
+}
+* body div.container ul li div.intervention-item-open div.des {
+  align-items: baseline;
+}
+* body div.container ul li div.intervention-item-open div.btn-bg {
+  width: 40%;
+  background-color: #003366;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border-radius: 8px;
+}
+* body div.container ul li div.intervention-item-open div.btn-bg.end {
+  background-color: crimson;
+}
+* body div.container ul li div.intervention-item-open div.btn-bg.start {
+  background-color: #004996;
+}
+* body div.container ul li div.intervention-item-open div.btn-bg div.btn {
+  width: -moz-max-content;
+  width: max-content;
+  font-weight: bold;
+  padding: 1em;
+  color: white;
+  display: grid;
+  align-items: center;
+  grid-template-columns: max-content auto;
+}
+* body div.container ul li div.intervention-item-open div.btn-bg div.btn span.material-icons {
+  font-size: 1.25em;
+  padding-right: 0.25em;
+}
+* body div.container ul li div.intervention-item-open h3.priority {
+  text-align: end;
+  display: grid;
+  grid-template-columns: auto max-content;
+  align-items: center;
+  padding-left: 1em;
+  color: #003366;
+}
+* body div.container ul li div.intervention-item-open h3.priority span.material-icons {
+  font-size: 0.75em;
+  padding-right: 0.25em;
+}
+* body div.container ul li div.intervention-item-open h3.priority span.high {
+  color: crimson;
+}
+* body div.container ul li div.intervention-item-open h3.priority span.medium {
+  color: #FFC700;
+}
+* body div.container ul li div.intervention-item-open h3.priority span.low {
+  color: springgreen;
+}
+* body footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #003366;
+  border-radius: 50px 50px 0 0;
+  width: 100%;
+  height: 10vh;
+}
+* body footer ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100%;
+}
+* body footer ul li.active {
+  background-color: #004996;
+}
+* body footer ul li a {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+* body footer ul li a img {
+  display: block;
+  height: 4em;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+* body footer ul li a span.material-icons {
+  display: block;
+  font-size: 4em;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.hidden-pro {
+  display: none;
+}/*# sourceMappingURL=tech_home_style.css.map */
